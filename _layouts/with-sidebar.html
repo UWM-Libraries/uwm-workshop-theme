@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="layout-with-sidebar">
+  <aside class="sidebar">
+    <nav class="lesson-sidebar-nav">
+      <ul>
+        {% assign lessons = site.lessons | sort: "position" %}
+        {% for lesson in lessons %}
+          <li>
+            <a href="{{ lesson.permalink | relative_url }}"
+              class="{% if lesson.url == page.url %}active{% endif %}">
+              {{ lesson.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    {% assign lessons = site.lessons | sort: "position" %}
+    {% assign current = page %}
+    {% assign current_index = nil %}
+
+    {% for lesson in lessons %}
+    {% if lesson.position == current.position %}
+        {% assign current_index = forloop.index0 %}
+    {% endif %}
+    {% endfor %}
+
+    {% assign previous = nil %}
+    {% assign next = nil %}
+    {% if current_index != nil %}
+    {% assign previous = lessons[current_index | minus: 1] %}
+    {% assign next = lessons[current_index | plus: 1] %}
+    {% endif %}
+
+    <nav class="breadcrumbs">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    {% if previous %}
+        / <a href="{{ previous.url | relative_url }}">{{ previous.title }}</a>
+    {% endif %}
+    / <span class="current">{{ page.title }}</span>
+    </nav>
+    {{ content }}
+  </main>
+</div>
