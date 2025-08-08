@@ -62,36 +62,50 @@ button:hover, .btn:hover {
   background-color: var(--uwm-orange);
 }
 
-/* Home page styles */
+/* --------------------------------------------------
+   Home Page Styling
+-------------------------------------------------- */
 
-.home-intro {
-  margin-bottom: 2rem;
-  p {
-    font-size: 1.1rem;
-  }
+.home-hero {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  background: var(--uwm-cream);
+  border-bottom: 2px solid var(--uwm-gold);
 }
 
-.lesson-listing {
-  h2 {
-    margin-top: 2rem;
-  }
-  .lesson-links {
-    list-style: decimal;
-    padding-left: 1.5rem;
+.uwm-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
 
-    li {
-      margin-bottom: 0.5rem;
+.home-branding h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--panther-black);
+  margin-bottom: 0.5rem;
+}
 
-      a {
-        color: var(--uwm-gold);
-        font-weight: bold;
-      }
+.home-branding .tagline {
+  font-size: 1.1rem;
+  color: var(--uwm-gray);
+  margin-bottom: 1.5rem;
+}
 
-      a:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+.start-button {
+  background: var(--uwm-gold);
+  color: var(--uwm-black);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.start-button:hover {
+  background: var(--uwm-orange);
 }
 
 /* Lesson Navigation Button Styles */
@@ -107,6 +121,27 @@ button:hover, .btn:hover {
 }
 
 /* Sidebar Stuff */
+
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: var(--uwm-cream);
+}
+
+.sidebar-header h2 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--panther-black);
+  font-family: var(--font-primary);
+}
+
+.sidebar-tagline {
+  font-size: 0.85rem;
+  color: var(--uwm-gray);
+  margin-top: 0.25rem;
+  font-family: var(--font-secondary);
+}
+
 
 .layout-with-sidebar {
   display: flex;

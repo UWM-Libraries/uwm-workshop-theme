@@ -4,6 +4,13 @@ layout: default
 
 <div class="layout-with-sidebar">
   <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/uwm-logo.svg' | relative_url }}" alt="UWM Libraries logo" class="sidebar-logo" />
+      </a>
+      <h2>UWM Libraries</h2>
+      <p class="sidebar-tagline">Workshop Template</p>
+    </div>
     <nav class="lesson-sidebar-nav">
       <ul>
         {% assign lessons = site.lessons | sort: "position" %}

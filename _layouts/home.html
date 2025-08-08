@@ -2,13 +2,13 @@
 layout: default
 ---
 
-{% comment %}This file gets wrapped by default.html{% endcomment %}
-
-<section class="home-intro">
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
-
-  {{ content }}
+<section class="home-hero">
+  <div class="home-branding">
+    <img src="{{ '/assets/images/uwm-logo.svg' | relative_url }}" alt="University of Wisconsin–Milwaukee Logo" class="uwm-logo">
+    <h1>{{ site.title }}</h1>
+    <p class="tagline">{{ site.description }}</p>
+    <a href="{{ site.lessons | sort: 'position' | first.permalink | relative_url }}" class="button start-button">Launch Lessons</a>
+  </div>
 </section>
 
 <section class="lesson-listing">
