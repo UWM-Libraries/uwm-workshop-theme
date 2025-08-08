@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<article class="lesson-page">
+  <h1>{{ page.title }}</h1>
+
+  <div class="lesson-content">
+    {{ content }}
+  </div>
+
+  <nav class="lesson-nav">
+    <ul>
+      {% assign lessons = site.lessons | sort: "position" %}
+      {% assign current_index = nil %}
+
+      {% for lesson in lessons %}
+        {% if lesson.position == page.position %}
+          {% assign current_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign previous = nil %}
+      {% assign next = nil %}
+
+      {% if current_index != nil %}
+        {% assign total = lessons | size %}
+
+        {% if current_index > 0 %}
+          {% assign previous_index = current_index | minus: 1 %}
+          {% assign previous = lessons[previous_index] %}
+        {% endif %}
+
+        {% assign next_index = current_index | plus: 1 %}
+        {% if next_index < total %}
+          {% assign next = lessons[next_index] %}
+        {% endif %}
+      {% endif %}
+
+      {% if previous %}
+        <li><a class="btn" href="{{ previous.permalink | relative_url }}">← {{ previous.title }}</a></li>
+      {% endif %}
+      {% if next %}
+        <li><a class="btn" href="{{ next.permalink | relative_url }}">{{ next.title }} →</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+</article>

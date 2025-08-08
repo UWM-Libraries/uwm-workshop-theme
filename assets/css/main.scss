@@ -1,0 +1,106 @@
+---
+---
+
+/* Declare fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* CSS custom properties must be inside a real selector in SCSS */
+html {
+  --uwm-gold: #FFB81C;
+  --panther-black: #000000;
+  --uwm-white: #FFFFFF;
+
+  --uwm-gray: #58595B;
+  --uwm-teal: #008675;
+  --uwm-aqua: #00B2A9;
+  --uwm-lime: #C4D600;
+  --uwm-orange: #F26622;
+  --uwm-cream: #F1EAD1;
+
+  --font-primary: 'Futura PT', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-secondary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--uwm-white);
+  color: var(--panther-black);
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-primary);
+  color: var(--panther-black);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--uwm-gold);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button, .btn {
+  background-color: var(--uwm-gold);
+  color: var(--panther-black);
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+button:hover, .btn:hover {
+  background-color: var(--uwm-orange);
+}
+
+/* Home page styles */
+
+.home-intro {
+  margin-bottom: 2rem;
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+.lesson-listing {
+  h2 {
+    margin-top: 2rem;
+  }
+  .lesson-links {
+    list-style: decimal;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: var(--uwm-gold);
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* Lesson Navigation Button Styles */
+
+.lesson-nav {
+  margin-top: 2rem;
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+}
+
