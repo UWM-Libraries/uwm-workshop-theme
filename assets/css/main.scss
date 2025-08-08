@@ -62,51 +62,6 @@ button:hover, .btn:hover {
   background-color: var(--uwm-orange);
 }
 
-/* --------------------------------------------------
-   Home Page Styling
--------------------------------------------------- */
-
-.home-hero {
-  text-align: center;
-  padding: 2rem 1rem 3rem;
-  background: var(--uwm-cream);
-  border-bottom: 2px solid var(--uwm-gold);
-}
-
-.uwm-logo {
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-.home-branding h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--panther-black);
-  margin-bottom: 0.5rem;
-}
-
-.home-branding .tagline {
-  font-size: 1.1rem;
-  color: var(--uwm-gray);
-  margin-bottom: 1.5rem;
-}
-
-.start-button {
-  background: var(--uwm-gold);
-  color: var(--uwm-black);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
-}
-
-.start-button:hover {
-  background: var(--uwm-orange);
-}
 
 /* Lesson Navigation Button Styles */
 
@@ -121,6 +76,26 @@ button:hover, .btn:hover {
 }
 
 /* Sidebar Stuff */
+
+.sidebar-contact {
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.sidebar-contact p {
+  margin-bottom: 1rem;
+}
+
+.sidebar-contact a {
+  color: var(--uwm-link);
+  text-decoration: underline;
+}
+
+.sidebar-contact a:hover {
+  text-decoration: none;
+}
 
 .sidebar-header {
   padding: 1rem;

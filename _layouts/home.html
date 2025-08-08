@@ -2,23 +2,46 @@
 layout: default
 ---
 
-<section class="home-hero">
-  <div class="home-branding">
-    <img src="{{ '/assets/images/uwm-logo.svg' | relative_url }}" alt="University of Wisconsin–Milwaukee Logo" class="uwm-logo">
-    <h1>{{ site.title }}</h1>
-    <p class="tagline">{{ site.description }}</p>
-    <a href="{{ site.lessons | sort: 'position' | first.permalink | relative_url }}" class="button start-button">Launch Lessons</a>
-  </div>
-</section>
+<div class="layout-with-sidebar">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/uwm-logo.svg' | relative_url }}" alt="UWM Libraries logo" class="sidebar-logo" />
+      </a>
+      <h2>UWM Libraries</h2>
+      <p class="sidebar-tagline">Workshop Template</p>
+    </div>
 
-<section class="lesson-listing">
-  <h2>Workshop Lessons</h2>
-  <ol class="lesson-links">
-    {% assign sorted_lessons = site.lessons | sort: "position" %}
-    {% for lesson in sorted_lessons %}
-      <li>
-        <a href="{{ lesson.permalink | relative_url }}">{{ lesson.title }}</a>
-      </li>
-    {% endfor %}
-  </ol>
-</section>
+    <div class="sidebar-contact">
+      <p><strong>Contact:</strong><br>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+
+      <p><strong>GitHub:</strong><br>
+      <a href="https://github.com/{{ site.github_username }}">
+        @{{ site.github_username }}
+      </a></p>
+
+      <p><strong>Website:</strong><br>
+      <a href="https://uwm.edu/libraries">uwm.edu/libraries</a></p>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section class="home-intro">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">{{ site.description }}</p>
+      {{ content }}
+    </section>
+
+    <section class="lesson-listing">
+      <h2>Workshop Lessons</h2>
+      <ol class="lesson-links">
+        {% for lesson in site.lessons | sort: "position" %}
+          <li>
+            <a href="{{ lesson.permalink | relative_url }}">{{ lesson.title }}</a>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  </main>
+</div>
