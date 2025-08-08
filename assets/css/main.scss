@@ -142,7 +142,7 @@ button:hover, .btn:hover {
   a {
     display: block;
     padding: 0.25rem 0.5rem;
-    color: var(--color-primary);
+    color: var(--uwm-black);
     text-decoration: none;
   }
 
@@ -169,14 +169,14 @@ button:hover, .btn:hover {
   margin-bottom: 1rem;
 
   a {
-    color: var(--color-primary);
+    color: var(--uwm-black);
     text-decoration: none;
   }
 
   .current {
     font-weight: bold;
     color: var(--uwm-black);
-  }
+  }s
 
   a:hover {
     text-decoration: underline;

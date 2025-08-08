@@ -45,12 +45,10 @@ layout: default
     {% endif %}
 
     <nav class="breadcrumbs">
-    <a href="{{ '/' | relative_url }}">Home</a>
-    {% if previous %}
-        / <a href="{{ previous.url | relative_url }}">{{ previous.title }}</a>
-    {% endif %}
-    / <span class="current">{{ page.title }}</span>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      / <span class="current">{{ page.title }}</span>
     </nav>
+
     {{ content }}
   </main>
 </div>
