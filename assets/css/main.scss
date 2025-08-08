@@ -9,6 +9,7 @@ html {
   --uwm-gold: #FFB81C;
   --panther-black: #000000;
   --uwm-white: #FFFFFF;
+  --uwm-link: #0057B8;
 
   --uwm-gray: #58595B;
   --uwm-teal: #008675;
@@ -39,10 +40,11 @@ h1, h2, h3, h4, h5 {
 }
 
 a {
-  color: var(--uwm-gold);
+  color: var(--uwm-link);
   text-decoration: none;
 }
 a:hover {
+  color: #003366;
   text-decoration: underline;
 }
 
@@ -114,7 +116,7 @@ button:hover, .btn:hover {
 }
 
 .sidebar {
-  flex: 0 0 200px;
+  flex: 0 0 300px;
   border-right: 1px solid var(--uwm-gray);
   padding-right: 1rem;
 }
@@ -178,12 +180,14 @@ pre, code {
 }
 
 pre {
+  width: 100%;
+  max-width: 90ch;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  overflow-x: auto;
   background-color: #f6f8fa;
-  border: 1px solid #d1d5da;
-  padding: 1em;
-  overflow: auto;
-  border-radius: 6px;
-  margin: 1em 0;
+  border-left: 4px solid var(--uwm-gold);
+  border-radius: 4px;
 }
 
 code {
