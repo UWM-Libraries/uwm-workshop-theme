@@ -6,7 +6,6 @@ website: https://uwm.edu/libraries/ # The website for the workshop author or ins
 description: >-
   A reusable template for building self-paced technology workshops at the University of Wisconsin–Milwaukee.
 baseurl: "/workshop-template" # Change to match your repo name when deploying
-permalink: pretty
 url: "https://uwm-libraries.github.io"
 
 # Collections
@@ -19,6 +18,7 @@ collections:
     permalink: /more/:name/
 
 # Build settings
+permalink: pretty
 plugins:
   - jekyll-feed
 markdown: kramdown
