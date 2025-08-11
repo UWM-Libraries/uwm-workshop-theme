@@ -8,12 +8,27 @@ published: true
 
 ## How to use this Template
 
+1. [Fork this repo](#fork-this-repository)
 1. [Modify \_config.yml](#modify-_configyml)
 1. [Modify index.md](#modify-indexmd)
 1. [Create lessons pages in markdown](#create-lessons-pages-in-markdown)
 1. [Add setup instructions, instructor notes, or other auxiliary pages](#add-setup-instructions-instructor-notes-or-other-auxiliary-pages)
 1. [Clean up template pages](#clean-up)
 1. [Problems? Suggestions? Need Help](#problems-suggestions-need-help)
+
+### Fork this repository
+
+1. Sign in to GitHub
+2. Navigate to this [repository’s main page](https://github.com/UWM-Libraries/uwm-workshop-theme).
+3. In the top-right corner, click the **Fork** button.
+4. Choose your GitHub account (or an organization you belong to) as the destination.
+5. (Optional) Rename your forked repository and update the description.
+6. Click **Create fork**.
+
+Now you can clone the repository to your local machine and [build using Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
+(recommended!)
+or
+modify the files directly in GitHub.
 
 ### Modify \_config.yml
 
