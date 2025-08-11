@@ -51,6 +51,22 @@ layout: default
         <div class="markdown-body">
           {{ content }}
         </div>
+
+        <div>
+          <br>
+          {% assign first_lesson = site.lessons 
+            | where_exp: 'l', 'l.position' 
+            | sort: 'position' 
+            | first %}
+
+          {% if first_lesson %}
+            <a class="btn" href="{{ first_lesson.url | relative_url }}">
+              Start {{ first_lesson.title }}
+            </a>
+          {% endif %}
+          <br>
+          <br>
+        </div>
     </section>
 
     <hr>
