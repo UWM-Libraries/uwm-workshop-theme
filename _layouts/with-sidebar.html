@@ -31,17 +31,18 @@ layout: default
     <nav class="breadcrumbs">
       <a href="{{ '/' | relative_url }}">Workshop Home</a> / <span class="current">{{ page.title }}</span>
     </nav>
+      <div class="markdown-body">
+        {{ content }}
+      </div>
 
-    {{ content }}
+      {% assign current_index = nil %}
+      {% for l in lessons %}
+        {% if l.url == page.url %}{% assign current_index = forloop.index0 %}{% endif %}
+      {% endfor %}
 
-    {% assign current_index = nil %}
-    {% for l in lessons %}
-      {% if l.url == page.url %}{% assign current_index = forloop.index0 %}{% endif %}
-    {% endfor %}
-
-    {% if current_index != nil %}
-      {% assign prev_index = current_index | minus: 1 %}
-      {% assign next_index = current_index | plus: 1 %}
+      {% if current_index != nil %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% assign next_index = current_index | plus: 1 %}
 
       <div class="lesson-nav">
         <ul>
