@@ -29,7 +29,7 @@ url: "https://uwm-libraries.github.io"
 github_username: uwm-libraries
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 markdown: kramdown
